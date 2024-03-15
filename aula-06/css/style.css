@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;700&display=swap');
+
+:root {
+  --primary-bg-color: #ebedf2;
+  --primary-text-color: #050505;
+  --white-color: #fff;
+  --bg-logo: #dedede;
+  --primary-color: #5e4ae3;
+  --shadow-color: #bfbfbf;
+  --warn-color: #f6c81a;
+  --bg-button-info: #3c337d;
+  --bg-button-danger: #e82d79;
+  --bg-button-cat: #d5d6da;
+  --color-icons: #5a5a5a;
+  --bg-body: #5645c42e;
+  --bg-online: #0f0;
+  --border-hover: #f00;
+  --bg-hover-sec1: #5226e326;
+  --bg-card-images: #fbd1e4;
+  --bg-card-documents: ;
+  --bg-card-videos: ;
+  --bg-card-pdf: ;
+  --bg-card-audio: ;
+  --color-card-images: #fc84ba;
+  --color-card-documents: #9381fe;
+  --color-card-videos: #89d95b;
+  --color-card-pdf: #eec160;
+  --color-card-audio: #76c4eb;
+  --border: 0.1rem solid #000;
+  --color-star: #ffff16;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', 'sans-serif';
+  text-decoration: none;
+}
+
+html {
+  font-size: 62.5%;
+  color: var(--primary-text-color);
+}
+
+body {
+  font-size: 1.6rem;
+  background: var(--bg-body);
+}
+
+h3 {
+  font-weight: 500;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+.container {
+  width: 80%;
+  height: 80rem;
+  margin: 0 auto;
+  background: var(--primary-bg-color);
+}
+
+.container #header {
+  width: 100%;
+  height: 6rem;
+  background: var(--white-color);
+  display: flex;
+  justify-content: space-between;
+  font-size: 2.5rem;
+}
+
+.container #header .header-left {
+  display: flex;
+  align-items: center;
+  width: 50%;
+}
+
+.container #header .header-left > div {
+  width: 7rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin-right: 5rem;
+  background: var(--bg-logo);
+  border-top-right-radius: 4rem;
+  border-bottom-right-radius: 4rem;
+  position: relative;
+}
+
+.container #header .header-left img {
+  width: 4rem;
+  margin-left: 0.5rem;
+  cursor: pointer;
+}
+
+.container #header .header-left img:hover {
+  opacity: 0.8;
+}
+
+.container #header .header-left .ball-align {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0.1rem 0.3rem 0.5rem 0.2rem var(--shadow-color);
+  background: var(--white-color);
+  position: absolute;
+  left: 5.2rem;
+  cursor: pointer;
+}
+
+.container #header .header-left .ball-align:hover {
+  opacity: 0.7;
+}
+
+.container #header .header-left i {
+  font-size: 2rem;
+  color: var(--color-icons);
+}
+
+.container #header .header-left input {
+  width: 40rem;
+  font-size: 1.5rem;
+  outline: none;
+  border: none;
+  margin-left: 2rem;
+}
+
+.container #header .header-right {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  justify-items: center;
+  margin-right: 2rem;
+}
+
+.container #header .header-right select {
+  outline: none;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.container #header .header-right .bell {
+  display: flex;
+  position: relative;
+}
+
+.container #header .header-right .notification {
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  font-size: 1rem;
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  background: var(--warn-color);
+  color: var(--white-color);
+  margin-top: -0.1rem;
+  margin-left: 2.2rem;
+  cursor: pointer;
+}
+
+.container #header .header-right i {
+  margin-left: 1rem;
+  cursor: pointer;
+}
+
+.container #header .header-right i:hover {
+  opacity: 0.7;
+}
+
+.container #header .header-right #perfil-menu {
+  width: 4rem;
+  border-radius: 50%;
+  margin-left: 1rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.container #header .header-right #perfil-menu:hover {
+  opacity: 0.8;
+}
+
+.container #header .header-right #menu {
+  display: none;
+  margin-top: -.5rem;
+  padding: 0.5rem;
+  font-size: 1.6rem;
+  height: 9rem;
+  background: var(--white-color);
+  border-radius: 0.5rem;
+  box-shadow: 0.1rem 0.3rem 0.5rem 0.2rem var(--shadow-color);
+  position: absolute;
+}
+
+.container #header .header-right #menu li {
+  cursor: pointer;
+}
+
+.modal {
+  display: none; 
+  position: fixed;
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%;
+  overflow: auto;
+  background: rgba(0,0,0,0.3);
+}
+
+.modal .content {
+  background: var(--white-color);
+  margin: 15% auto;
+  padding: 2rem;
+  border-radius: .5rem;
+  width: 70%; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

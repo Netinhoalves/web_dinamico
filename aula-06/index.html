@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashbord</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header id="header">
+      <div class="header-left">
+        <div>
+          <img src="./img/logo1.png" />
+          <div class="ball-align">
+            <i class="bx bx-align-left"></i>
+          </div>
+        </div>
+        <i class="bx bx-search"></i>
+        <input type="text" placeholder="Search User, Event and more.." />
+      </div>
+      <!-- NAV RIGHT -->
+      <div class="header-right">
+        <select id="language">
+          <option>Brazil</option>
+          <option>English</option>
+          <option>Spanish</option>
+        </select>
+        <i class="bx bx-cog"></i>
+        <div class="bell">
+          <i class="bx bx-bell"></i>
+          <div class="notification">1</div>
+        </div>
+        <div>
+          <img id="perfil-menu" onclick="showMore()" src="./img/avatar1.png" />
+          <ul id="menu">
+            <li id="settings">Settings</li>
+            <li id="profile">Profile</li>
+            <li id="logout">Logout</li>
+          </ul>
+          <div class="modal">
+            <div class="content">
+              <h1 class="title">Perfil</h1>
+            </div>
+          </div>
+    </header>
+  </div>
+
+  <script src="./js/script.js"></script>
+</body>
+
+</html>
