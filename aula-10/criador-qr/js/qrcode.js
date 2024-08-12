@@ -1,13 +1,14 @@
 const dark = document.querySelector('.dark');
 const light = document.querySelector('.light');
 const qrText = document.querySelector('.qr-text');
-const sizes = document.querySelector('.sizes');
+const sizesSelect = document.querySelector('.sizes');
+
 const qrCode = document.querySelector('#qr-code');
 
 dark.addEventListener('input', handleDarkColor);
 light.addEventListener('input', handleLightColor);
 qrText.addEventListener('input', handleQRText);
-sizes.addEventListener('change', handleSizes);
+sizesSelect.addEventListener('change', handleSizes);
 
 const defaultText = 'www.ifms.edu.br';
 let colorDark = '#000';
@@ -34,18 +35,18 @@ function handleQRText(e) {
 }
 
 function handleSizes(e) {
-  sizes = e.target.value;
+  size = e.target.value;
   generateQRCode();
 }
 
 function generateQRCode() {
   qrCode.innerHTML = '';
-  new QRCode('qr-code', {
+  new QRCode(qrCode, {
     text,
-    height: size,
     width: size,
+    height: size,
     colorDark,
-    ColorLight,
+    colorLight,
   });
 }
 
