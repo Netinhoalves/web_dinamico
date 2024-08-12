@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  background: #1c1c1c;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+input[type="color"] {
+  width: 32%;
+  height: 4rem;
+  border: none;
+  border-radius: .5rem;
+}
+
+.sizes {
+  width: 32%;
+  height: 4rem;
+  color: #fff;
+  background: #181b29;
+  border: .1rem solid #414866;
+  border-radius: .5rem;
+}
+
+.qr-text {
+  padding: 2rem;
+  width: 100%;
+  background: #181b29;
+  color: #fff;
+  border: .1rem solid #414866;
+  border-radius: .5rem;
+  margin: .5rem 0 1rem 0;
+}
+
+.qr-text::placeholder {
+  color: #fff;
+  font-weight: 500;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#qr-code {
+  height: 50rem;
+  width: 50rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: .1rem solid #414866;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.buttons button {
+  margin: 1rem 0;
+  /* padding: 1.5rem 3rem; */
+  width: 32%;
+  height: 4rem;
+  border: none;
+  border-radius: .5rem;
+  cursor: pointer;
+  background: #6020ff;
+  color: #fff;
+}
+
+.buttons button:hover {
+  background: #7040ff;
+}
