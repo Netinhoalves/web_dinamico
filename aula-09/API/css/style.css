@@ -1,0 +1,49 @@
+:root {
+  --bg-primary: #000;
+  --color01: #cfcfcf;
+  --color02: #9f9f9f;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+#container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
+  gap: 2rem;
+  overflow: auto;
+}
+
+#comments-container {
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
+  gap: 2rem;
+  overflow: auto;
+}
+
+.card {
+  width: 32rem;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: var(--color01);
+  border: 0.1rem solid var(--color02);
+  border-radius: 0.5rem;
+  box-shadow: 0 0.2rem 0.4rem rgb(0, 0, 0, 0.1);
+}
