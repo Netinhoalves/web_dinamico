@@ -51,3 +51,38 @@ function generateQRCode() {
 }
 
 generateQRCode();
+
+const downloadBtn = document.querySelector('.download');
+
+downloadBtn.addEventListener('click', downloadQRCode);
+
+function downloadQRCode() {
+  const qrCanvas = qrCode.querySelector('canvas');
+  if (qrCanvas) {
+    const qrDataURL = qrCanvas.toDataURL('image/png');
+    const link = document.createElement('a');
+    link.href = qrDataURL;
+    link.download = 'qrcode.png';
+    link.click();
+  }
+}
+
+const shareBtn = document.querySelector('.share');
+
+shareBtn.addEventListener('click', shareQRCode);
+
+function shareQRCode() {
+  const qrCanvas = qrCode.querySelector('canvas');
+  if (navigator.share && qrCanvas) {
+    qrCanvas.toBlob((blob) => {
+      const file = new File([blob], 'qrcode.png', { type: 'image/png' });
+      navigator.share({
+        title: 'QR Code',
+        text: 'Aqui está o QR Code gerado',
+        files: [file],
+      }).catch(error => console.log('Erro ao compartilhar', error));
+    });
+  } else {
+    alert('O compartilhamento de arquivos não é suportado neste navegador.');
+  }
+}
