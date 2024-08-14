@@ -72,7 +72,6 @@ input[type="color"] {
 
 .buttons button {
   margin: 1rem 0;
-  /* padding: 1.5rem 3rem; */
   width: 32%;
   height: 4rem;
   border: none;
@@ -84,4 +83,25 @@ input[type="color"] {
 
 .buttons button:hover {
   background: #7040ff;
+}
+
+@media (max-width: 700px) {
+  input[type="color"] {
+    height: 3rem;
+  }
+  .sizes {
+    height: 3rem;
+  }
+  .qr-text {
+    padding: 1rem;
+    width: 100%;
+    margin: .5rem 0 1rem 0;
+  }
+  #qr-code {
+    height: 30rem;
+    width: 30rem;
+  }
+  .buttons button {
+    height: 3rem;
+  }
 }

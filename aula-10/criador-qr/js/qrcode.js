@@ -86,3 +86,23 @@ function shareQRCode() {
     alert('O compartilhamento de arquivos não é suportado neste navegador.');
   }
 }
+
+function updateSelectOptions() {
+  const sizeSelect = document.getElementById('size-select');
+  const options = sizeSelect.querySelectorAll('option');
+
+  if (window.innerWidth <= 700) {
+    options.forEach(option => {
+      if (option.value === '400' || option.value === '500') {
+        option.style.display = 'none';
+      }
+    });
+  } else {
+    options.forEach(option => {
+      option.style.display = 'block';
+    });
+  }
+}
+
+window.addEventListener('load', updateSelectOptions);
+window.addEventListener('resize', updateSelectOptions);
