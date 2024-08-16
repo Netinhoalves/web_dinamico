@@ -52,12 +52,12 @@ function generateQRCode() {
 
 generateQRCode();
 
-const downloadBtn = document.querySelector('.download');
+const qrCanvas = qrCode.querySelector('canvas');
 
+const downloadBtn = document.querySelector('.download');
 downloadBtn.addEventListener('click', downloadQRCode);
 
 function downloadQRCode() {
-  const qrCanvas = qrCode.querySelector('canvas');
   if (qrCanvas) {
     const qrDataURL = qrCanvas.toDataURL('image/png');
     const link = document.createElement('a');
@@ -68,11 +68,9 @@ function downloadQRCode() {
 }
 
 const shareBtn = document.querySelector('.share');
-
 shareBtn.addEventListener('click', shareQRCode);
 
 function shareQRCode() {
-  const qrCanvas = qrCode.querySelector('canvas');
   if (navigator.share && qrCanvas) {
     qrCanvas.toBlob((blob) => {
       const file = new File([blob], 'qrcode.png', { type: 'image/png' });
