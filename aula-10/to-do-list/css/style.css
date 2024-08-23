@@ -1,0 +1,200 @@
+:root {
+  --color-white: #ffffff;
+  --color-01: #f7f7f7;
+  --color-02: #ededed;
+  --color-03: #dedede;
+  --color-04: #cccccc;
+  --color-05: #b2b2b2;
+  --color-06: #9c9c9c;
+  --color-07: #717171;
+  --color-08: #595959;
+  --color-09: #404040;
+  --color-10: #2e2e2e;
+  --color-11: #111111;
+  --color-12: #000000;
+  --color-p1: #39b163;
+  --color-p2: #42c26e;
+  --color-p3: #55c87d;
+  --color-p4: #68ce8c;
+  --text-low: #144709;
+  --bg-low: #deffd8;
+  --border-low: #b2e2ac;
+  --text-medium: #493F01;
+  --bg-medium: #FFFCDA;
+  --border-medium: #E2DDB1;
+  --text-high: #642221;
+  --bg-high: #FEDCDB;
+  --border-high: #DDA7A5;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Ubuntu', sans-serif;
+  text-decoration: none;
+}
+
+body {
+  font-size: 62.5%;
+}
+
+html {
+  font-size: 1.6rem;
+  color: var(--color-12);
+}
+
+input,
+select {
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.1rem;
+  border: 0.1rem solid var(--color-white);
+}
+
+button {
+  padding: 0.2rem 0.4rem;
+  background-color: var(--color-p1);
+  color: var(--color-white);
+  border: none;
+  border-radius: 0.1rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button i {
+  pointer-events: none;
+}
+
+button:hover,
+button:hover > i {
+  background-color: var(--color-white);
+  color: var(--color-p1);
+}
+
+.container {
+  margin: 1rem auto;
+  padding: 1rem;
+  max-width: 22rem;
+  background: var(--color-03);
+  border-radius: 0.5rem;
+}
+
+.container header {
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 0.1rem solid var(--color-p1);
+}
+
+#todo-form,
+#edit-form {
+  padding: 0.5rem;
+}
+
+#todo-form h4,
+#edit-form h4 {
+  margin-bottom: 0.2rem;
+  font-weight: 700;
+}
+
+.form-control {
+  display: flex;
+  gap: 0.3rem;
+}
+
+.form-control input {
+  width: 100%;
+}
+
+#toolbar {
+  padding: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+#toolbar h4 {
+  margin-bottom: 0.2rem;
+}
+
+#search form {
+  display: flex;
+  gap: 0.3rem;
+}
+
+#filter {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+}
+
+#filter select {
+  flex: 1;
+}
+
+.todo {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.5rem;
+  border-top: 0.1rem solid var(--color-04);
+  transition: 0.3s;
+}
+
+.todo:last-child {
+  border-bottom: 0.1rem solid var(--color-04);
+}
+
+.todo h3 {
+  flex: 1;
+  font-size: 0.9rem;
+}
+
+.todo .priority {
+  width: 2.4rem;
+  padding: .2em 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  border-radius: 0.1rem;
+}
+
+.todo .low {
+  color: var(--text-low);
+  background: var(--bg-low);
+  border: 0.1em solid var(--border-low);
+}
+
+.todo .medium {
+  color: var(--text-medium);
+  background: var(--bg-medium);
+  border: 0.1em solid var(--border-medium);
+}
+
+.todo .high {
+  color: var(--text-high);
+  background: var(--bg-high);
+  border: 0.1em solid var(--border-high);
+}
+
+.todo button {
+  margin-left: 0.4rem;
+}
+
+.hide {
+  display: none !important;
+}
+
+.done {
+  background: var(--color-p4);
+}
+
+.done h3 {
+  color: var(--color-white);
+  font-style: italic;
+  text-decoration: line-through;
+}
